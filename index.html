@@ -1,0 +1,43 @@
+<!-- ArcGIS + Calcite imports -->
+<script type="module" src="https://js.arcgis.com/calcite-components/3.2.1/calcite.esm.js"></script>
+<link rel="stylesheet" href="https://js.arcgis.com/4.33/esri/themes/light/main.css" />
+<script src="https://js.arcgis.com/4.33/"></script>
+<script type="module" src="https://js.arcgis.com/4.33/map-components/"></script>
+<link rel="stylesheet" href="style.css">
+
+<!-- Raster selection controls -->
+ <body>
+<div id="legend" style="position:absolute; bottom:10px; right:10px; z-index:100; background:white; padding:10px; border-radius:5px;"></div>
+
+  <div id="controls" style="position:absolute; top:10px; right:10px; z-index:100; background:white; padding:10px; border-radius:5px;">
+    <label><strong>Subsidence Threshold (cm):</strong></label>
+    <select id="cmSelect">
+      <option value="50">50</option>
+      <option value="100">100</option>
+    </select>
+
+    <br><br>
+    <label><strong>Time Period (years):</strong></label>
+    <select id="yearSelect">
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+      <option value="200">200</option>
+    </select>
+
+    <br><br>
+    <label><strong>Condition:</strong></label>
+    <select id="condSelect">
+      <option value="bo">Overall Probability</option>
+      <option value="y">Earthquake</option>
+      <option value="n">No Earthquake</option>
+    </select>
+  </div>
+
+<!-- ArcGIS Map -->
+<arcgis-map basemap="topo" center="-122,46" zoom="6">
+<!-- item-id="486133bb5b16489287e9204a0161d60f">-->
+  <arcgis-zoom position="top-left"></arcgis-zoom>
+</arcgis-map>
+  <script type="module" src="script.js"></script>
+</body>

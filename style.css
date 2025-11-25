@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+label {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.esri-popup__header-buttons .esri-popup__button {
+  width: 24px; /* Adjust button width */
+  height: 24px; /* Adjust button height */
+  font-size: 14px; /* Adjust icon size if applicable */
+}
