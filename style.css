@@ -3,26 +3,78 @@ body {
   height: 100%;
   margin: 0;
 }
+#titlebar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 450px;
+  background: white;
+  padding: 12px 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  justify-content: flex-start;
+}
+
+#titlebar h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#projectBtn {
+  margin-left: auto;
+  font-size: 1.2rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #0078ff;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#projectBtn:hover {
+  background: #005fcc;
+}
 
 #controls {
   position: absolute;
   top: 10px;
   right: 10px;
+  width: 410px;
   background: white;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  font-size: 1.2rem;
+  z-index: 100;
+  font-size: 1.5rem;
+}
+#controls select,
+#controls option,
+#controls label {
+  font-size: inherit; 
+}
+#legend {
+ position: absolute;
+ bottom: 10px;
+ right: 10px;
+ z-index: 100;
+ background: white;
+ padding: 10px;
+ border-radius: 5px;
+ font-size: 1.2rem;
 }
 
 label {
   margin-right: 8px;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.esri-popup__header-buttons .esri-popup__button {
-  width: 24px; /* Adjust button width */
-  height: 24px; /* Adjust button height */
-  font-size: 14px; /* Adjust icon size if applicable */
+arcgis-zoom {
+  margin-top: 70px; /* Moves the zoom widget down */
 }
