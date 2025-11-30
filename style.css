@@ -9,35 +9,33 @@ body {
   left: 10px;
   right: 10px;
   display: flex;
-  flex-wrap: wrap;       /* allow wrapping on mobile */
   gap: 10px;
+  justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap; /* allows titlebar + controls to wrap if needed */
   z-index: 200;
 }
 
 #titlebar {
   display: flex;
-  flex-wrap: wrap;       /* allow title + button to wrap */
+  flex-direction: column; /* vertical: title then button */
   align-items: center;
   gap: 5px;
   background: white;
-  padding: 10px;
+  padding: 12px 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.25);
   border-radius: 8px;
-  flex: 1 1 auto;        /* take available space, but max limited by sibling */
-  min-width: 200px;      /* avoid shrinking too small */
 }
 
 #titlebar h1 {
   margin: 0;
+  font-size: 1.4rem;
   font-weight: bold;
-  white-space: normal;   /* allow wrapping */
-  flex: 1 1 auto;        /* fill remaining space in titlebar */
-  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  line-height: 1.2;
+  text-align: center;
 }
 
 #projectBtn {
-  flex: 0 0 auto;        /* only natural width */
   font-size: 1.2rem;
   padding: 8px 14px;
   border-radius: 6px;
@@ -45,7 +43,7 @@ body {
   cursor: pointer;
   background: #0078ff;
   color: white;
-  margin-top: 5px;
+  align-self: center; /* button left-aligned with title */
 }
 #projectBtn:hover {
   background: #005fcc;
@@ -56,9 +54,9 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   font-size: 1.5rem;
-  flex: 0 0 auto;        /* width based on content, does not stretch */
-  min-width: 180px;      /* optional, prevent collapsing */
-  max-width: 90vw;       /* responsive */
+  flex: 0 0 auto;       /* natural width */
+  min-width: 180px;
+  max-width: 90vw;      /* responsive on mobile */
 }
 #controls select,
 #controls option,
@@ -83,14 +81,6 @@ label {
   font-size: 1.5rem;
 }
 
-arcgis-zoom {
-  position: absolute !important; /* ensure it overrides default */
-  bottom: 10px;
-  left: 10px;
-  top: auto !important;          /* cancel any top positioning */
-  margin: 0 !important;          /* remove default margins */
-  z-index: 300;
-}
 
 #projectDescriptionModal {
   display: none; /* hidden by default */
@@ -122,5 +112,11 @@ arcgis-zoom {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+}
+#popupContent img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
