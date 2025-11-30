@@ -3,30 +3,41 @@ body {
   height: 100%;
   margin: 0;
 }
-#titlebar {
+#top-ui {
   position: absolute;
   top: 10px;
   left: 10px;
-  right: 450px;
-  background: white;
-  padding: 12px 5px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  z-index: 200;
+  right: 10px;
   display: flex;
+  flex-wrap: wrap;       /* allow wrapping on mobile */
+  gap: 10px;
+  align-items: flex-start;
+  z-index: 200;
+}
+
+#titlebar {
+  display: flex;
+  flex-wrap: wrap;       /* allow title + button to wrap */
   align-items: center;
-  gap: 1px;
-  justify-content: flex-start;
+  gap: 5px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  border-radius: 8px;
+  flex: 1 1 auto;        /* take available space, but max limited by sibling */
+  min-width: 200px;      /* avoid shrinking too small */
 }
 
 #titlebar h1 {
   margin: 0;
   font-size: 1.6rem;
   font-weight: bold;
-  white-space: nowrap;
+  white-space: normal;   /* allow wrapping */
+  flex: 1 1 auto;        /* fill remaining space in titlebar */
 }
 
 #projectBtn {
-  margin-left: auto;
+  flex: 0 0 auto;        /* only natural width */
   font-size: 1.2rem;
   padding: 8px 14px;
   border-radius: 6px;
@@ -34,30 +45,26 @@ body {
   cursor: pointer;
   background: #0078ff;
   color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-
 #projectBtn:hover {
   background: #005fcc;
 }
-
 #controls {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 410px;
   background: white;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   font-size: 1.5rem;
+  flex: 0 0 auto;        /* width based on content, does not stretch */
+  min-width: 180px;      /* optional, prevent collapsing */
+  max-width: 90vw;       /* responsive */
 }
 #controls select,
 #controls option,
 #controls label {
   font-size: inherit; 
 }
+
 #legend {
  position: absolute;
  bottom: 10px;
