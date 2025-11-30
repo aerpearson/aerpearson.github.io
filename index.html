@@ -11,6 +11,20 @@
   <h1>Probability of Vertical Land Motion Over Time in Cascadia</h1>
   <button id="projectBtn">Description</button>
 </div>
+<div id="projectDescriptionModal">
+  <div id="projectDescriptionContent">
+    <span id="closeProjectDescription">&times;</span>
+    <h2>Description</h2>
+    <p>
+    This tool shows the probability of vertical land motion over time in Cascadia. The map view displays the probability of exceeding a given subsidence threshold over a time period, including the overall probability and with the assumption that a major subduction zone earthquake does or does not occur. Use the dropdown menu to the right to explore different scenarios.
+    </p><p>
+    Click on a point along the coast to view histograms showing the probability of different amounts of uplift or subsidence at that location (for a given time period and scenario). 
+    </p>
+    <p>
+    This project was developed by Jeonghyeop Kim, David Schmidt, and Anna Pearson as a part of the <a href="https://cascadiacopeshub.org" target="_blank" rel="noopener">Cascadia CoPes Hub</a> (NSF Grant #2103713). 
+    </p>
+  </div>
+</div>
 
 <div id="legend"></div>
 
@@ -45,4 +59,22 @@
   <arcgis-zoom position="top-left"></arcgis-zoom>
 </arcgis-map>
   <script type="module" src="script.js"></script>
+  <script src="script.js"></script>
+<script>
+  const projectBtn = document.getElementById("projectBtn");
+  const projectModal = document.getElementById("projectDescriptionModal");
+  const closeBtn = document.getElementById("closeProjectDescription");
+
+  projectBtn.addEventListener("click", () => {
+    projectModal.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    projectModal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === projectModal) projectModal.style.display = "none";
+  });
+</script>
 </body>
