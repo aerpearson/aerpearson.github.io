@@ -30,10 +30,10 @@ body {
 
 #titlebar h1 {
   margin: 0;
-  font-size: 1.6rem;
   font-weight: bold;
   white-space: normal;   /* allow wrapping */
   flex: 1 1 auto;        /* fill remaining space in titlebar */
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
 }
 
 #projectBtn {
@@ -45,6 +45,7 @@ body {
   cursor: pointer;
   background: #0078ff;
   color: white;
+  margin-top: 5px;
 }
 #projectBtn:hover {
   background: #005fcc;
@@ -83,8 +84,14 @@ label {
 }
 
 arcgis-zoom {
-  margin-top: 70px; /* Moves the zoom widget down */
+  position: absolute !important; /* ensure it overrides default */
+  bottom: 10px;
+  left: 10px;
+  top: auto !important;          /* cancel any top positioning */
+  margin: 0 !important;          /* remove default margins */
+  z-index: 300;
 }
+
 #projectDescriptionModal {
   display: none; /* hidden by default */
   position: fixed;

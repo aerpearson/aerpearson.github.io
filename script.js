@@ -319,7 +319,7 @@
     const img = document.createElement("img");
     img.src = imageFiles[currentIndex].src;
     //img.alt = "Probability";
-    img.width = 500;
+    img.width = 400;
     img.style.borderRadius = "8px";
     img.style.border = "1px solid #ffffffff";
     popupContent.appendChild(img);
