@@ -291,8 +291,8 @@
     });
     view.graphics.add(pointGraphic);
     // --- Step 4. Build image path dynamically
-    const imageBase = `http://localhost:8000/images/new_result_smoothed_10272025_${closestIndex}_${yearValue}`;
-    const hazardBase = `http://localhost:8000/images/Hazard_curvenew_result_smoothed_10272025_${closestIndex}_${yearValue}`;
+    const imageBase = `./images/new_result_smoothed_10272025_${closestIndex}_${yearValue}`;
+    const hazardBase = `./images/Hazard_curvenew_result_smoothed_10272025_${closestIndex}_${yearValue}`;
     const imageFiles = [
       { src: `${imageBase}_bo.png`, title: "Overall Probability" },
       { src: `${imageBase}_y.png`,  title: "At least 1 Earthquake Affects the Area" },
@@ -300,12 +300,12 @@
       { src: `${hazardBase}.png`,  title: "Overall Exceedance Hazard Curve" }
     ];
     // const imageFile = `new_result_smoothed_10272025_${closestIndex}_${yearValue}.png`;
-    // const imagePath = `http://localhost:8000/images/${imageFile}`; // adjust if in subfolder
+    // const imagePath = `./images/${imageFile}`; // adjust if in subfolder
 
     // --- Step 6. Open popup with image
     const popupContent = document.createElement("div");
     popupContent.style.textAlign = "center";
-    popupContent.style.width = "270px"; 
+    popupContent.style.width = "500px"; 
 
 
     let currentIndex = 0;
@@ -319,7 +319,7 @@
     const img = document.createElement("img");
     img.src = imageFiles[currentIndex].src;
     //img.alt = "Probability";
-    img.width = 400;
+    img.width = 500;
     img.style.borderRadius = "8px";
     img.style.border = "1px solid #ffffffff";
     popupContent.appendChild(img);
