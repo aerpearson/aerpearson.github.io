@@ -128,4 +128,13 @@ label {
   border-radius: 8px;
 }
 
+.esri-popup__content,
+.esri-popup__main-container {
+  width: 90vw !important;
+  max-width: 800px !important;
+}
 
+.esri-popup__content img {
+  width: 100% !important;
+  height: auto !important;
+}
