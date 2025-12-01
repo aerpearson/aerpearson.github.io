@@ -18,7 +18,7 @@
 
   // Define your line layer (no renderer yet)
   const subsidenceLine = new FeatureLayer({
-    url: "https://services.arcgis.com/JL4BwWcjcPuWhBm9/arcgis/rest/services/subsidence_map_line/FeatureServer/0",
+    url: "https://services.arcgis.com/JL4BwWcjcPuWhBm9/arcgis/rest/services/subsidence_map_line_highres/FeatureServer/0",
     title: "Subsidence Lines"
   });
 
@@ -94,7 +94,7 @@
     outer.style.gap = "10px"; // space between left and right
     outer.style.position = "relative";
     outer.style.marginTop = "5px";
-
+    outer.style.flexWrap="nowrap";
     // --- Left side: bar + percent labels ---
     const leftContainer = document.createElement("div");
     leftContainer.style.display = "flex";
@@ -312,7 +312,8 @@
     const img = document.createElement("img");
     img.src = imageFiles[currentIndex].src;
     //img.alt = "Probability";
-    img.width = "25vw";
+    img.style.maxWidth="100%";
+    img.style.height="auto";
     img.style.borderRadius = "8px";
     img.style.border = "1px solid #ffffffff";
     popupContent.appendChild(img);
