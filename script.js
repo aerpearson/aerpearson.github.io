@@ -298,7 +298,7 @@
     // --- Step 6. Open popup with image
     const popupContent = document.createElement("div");
     popupContent.style.textAlign = "center";
-    popupContent.style.width = "500px"; 
+    popupContent.style.width = "30vw"; 
 
 
     let currentIndex = 0;
@@ -312,7 +312,7 @@
     const img = document.createElement("img");
     img.src = imageFiles[currentIndex].src;
     //img.alt = "Probability";
-    img.width = 400;
+    img.width = "25vw";
     img.style.borderRadius = "8px";
     img.style.border = "1px solid #ffffffff";
     popupContent.appendChild(img);
