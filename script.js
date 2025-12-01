@@ -346,6 +346,11 @@
     function updateImage() {
       img.src = imageFiles[currentIndex].src;
       //imgTitle.textContent = imageFiles[currentIndex].title;
+      if (img.src.includes("Hazard_curve")) {
+        img.style.width = "50%";
+      } else {
+        img.style.width = "100%";  // normal size
+      }
       prevBtn.disabled = currentIndex === 0;
       nextBtn.disabled = currentIndex === imageFiles.length - 1;
       console.log(imageFiles[currentIndex].src);
@@ -366,7 +371,7 @@
     });
 
     view.popup.open({
-      title: `Probability of vertical land motion in the next ${yearValue} years at the closest coastal point (${clickedLat.toFixed(1)}\u00B0 N,${-clickedLon.toFixed(1)}\u00B0 W)`,
+      title: `Probability of VLM in the next ${yearValue} years at the closest coastal point (${clickedLat.toFixed(1)}\u00B0 N,${-clickedLon.toFixed(1)}\u00B0 W)`,
       location: mapPoint,
       content: popupContent,
       includeDefaultActions: false,
