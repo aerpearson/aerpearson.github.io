@@ -298,7 +298,7 @@
     // --- Step 6. Open popup with image
     const popupContent = document.createElement("div");
     popupContent.style.textAlign = "center";
-    popupContent.style.width = "30vw"; 
+    popupContent.style.width = "40vw"; 
 
 
     let currentIndex = 0;

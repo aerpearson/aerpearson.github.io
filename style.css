@@ -131,8 +131,8 @@ label {
 .esri-view-width-large .esri-popup__main-container,
 .esri-view-width-medium .esri-popup__main-container
 {
-  max-height: 30vw !important;
-  max-width: 35vw !important;
+  max-height: 35vw !important;
+  max-width: 45vw !important;
   width: auto !important;
 }
 
