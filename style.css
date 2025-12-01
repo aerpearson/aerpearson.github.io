@@ -127,14 +127,12 @@ label {
   display: block;
   border-radius: 8px;
 }
-
-.esri-popup__content,
-.esri-popup__main-container {
-  width: 90vw !important;
-  max-width: 800px !important;
+.esri-view-width-xlarge .esri-popup__main-container,
+.esri-view-width-large .esri-popup__main-container,
+.esri-view-width-medium .esri-popup__main-container
+{
+  max-height: 30vw !important;
+  max-width: 35vw !important;
+  width: auto !important;
 }
 
-.esri-popup__content img {
-  width: 100% !important;
-  height: auto !important;
-}
