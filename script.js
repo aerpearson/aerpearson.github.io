@@ -141,14 +141,7 @@
 
     // --- Right side: text section ---
     const textDiv = document.createElement("div");
-    textDiv.style.display = "flex";
-    textDiv.style.flexDirection = "column";
-    textDiv.style.flexWrap = "wrap";
-    textDiv.style.maxWidth = "180px"; // wraps text so it doesn’t make the legend wide
-
-    textDiv.innerHTML = `
-      <strong>${fieldLabel}</strong>
-    `;
+    textDiv.textContent = fieldLabel;
 
     // --- Assemble ---
     outer.appendChild(leftContainer);
