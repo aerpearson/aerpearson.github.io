@@ -337,6 +337,8 @@
     nextBtn.textContent = "Next ▶";
     nextBtn.style.padding = "4px 8px";
     nextBtn.style.cursor = "pointer";
+    prevBtn.classList.add("popup-nav-btn");
+    nextBtn.classList.add("popup-nav-btn");
 
     btnContainer.appendChild(prevBtn);
     btnContainer.appendChild(nextBtn);
