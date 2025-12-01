@@ -373,7 +373,7 @@
     });
 
     view.popup.open({
-      title: `Probability of VLM in the next ${yearValue} years at the closest coastal point (${clickedLat.toFixed(1)}\u00B0 N,${-clickedLon.toFixed(1)}\u00B0 W)`,
+      title: `Probability of VLM in ${yearValue} years at (${clickedLat.toFixed(2)}\u00B0 N,${-clickedLon.toFixed(2)}\u00B0 W)`,
       location: mapPoint,
       content: popupContent,
       includeDefaultActions: false,
