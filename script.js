@@ -18,7 +18,7 @@
 
   // Define your line layer (no renderer yet)
   const subsidenceLine = new FeatureLayer({
-    url: "https://services.arcgis.com/JL4BwWcjcPuWhBm9/arcgis/rest/services/subsidence_map_line_highres/FeatureServer/0",
+    url: "https://services.arcgis.com/JL4BwWcjcPuWhBm9/arcgis/rest/services/subsidence_map_line_highres/FeatureServer",
     title: "Subsidence Lines"
   });
 
